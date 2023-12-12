@@ -1,0 +1,16 @@
+.theme-night-dive{
+    --hi-primary: #19a8f5;
+    --hi-primary-rgb: 25,168,245;
+
+    --hi-secondary: #a7e0ff;
+
+    --hi-accent-1: #9280fd;
+    --hi-accent-1-rgb: 146,128,253;
+    --hi-accent-2: #3c71fc;
+    --hi-accent-2-rgb: 60,113,252;
+    --hi-accent-3: #50d3fc;
+    --hi-accent-3-rgb:80,211,252;
+
+    --hi-bg: linear-gradient(105.96deg, var(--hi-secondary) 0.05%, var(--hi-primary) 100.05%); 
+
+}

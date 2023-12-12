@@ -1,0 +1,16 @@
+.theme-aurora{
+    --hi-primary: #19E99E;
+    --hi-primary-rgb: 25,233,158;
+
+    --hi-secondary: #A3E9D0;
+
+    --hi-accent-1: #F1BE0A;
+    --hi-accent-1-rgb: 241,190,10;
+    --hi-accent-2: #23A1D8;
+    --hi-accent-2-rgb: 35,161,216;
+    --hi-accent-3: #24D321;
+    --hi-accent-3-rgb: 36,211,33;
+
+    --hi-bg: linear-gradient(105.96deg, var(--hi-secondary) 0.05%, var(--hi-primary) 100.05%); 
+
+}

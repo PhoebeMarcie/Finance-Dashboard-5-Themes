@@ -1,0 +1,17 @@
+.theme-ice{
+    --hi-primary: #94e3f1;
+    --hi-primary-rgb: 148, 227, 241;
+
+    --hi-secondary: #caebf1;
+
+    --hi-accent-1: #54c8d8;
+    --hi-accent-1-rgb: 84, 200, 216;
+    --hi-accent-2: #b46bee;
+    --hi-accent-2-rgb: 180, 107 , 238;
+    --hi-accent-3: #6d87e2;
+    --hi-accent-3-rgb: 109, 135 , 226;
+
+    --hi-bg: linear-gradient(105.96deg, var(--hi-secondary) 0.05%, var(--hi-primary) 100.05%); 
+
+    
+}

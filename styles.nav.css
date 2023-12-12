@@ -1,0 +1,57 @@
+nav{
+    display: grid;
+    grid-template-rows: max-content 1fr max-content;
+    grid-template-columns: 1fr;
+    justify-items: center;
+
+    padding: calc(2.5 * var(--sp-base)) 0;
+
+    row-gap:  calc(5 * var(--sp-base));
+
+    background-color: var(--bg-alt);
+}
+
+.nav-items {
+    display: grid;
+    grid-auto-flow: row;
+    grid-auto-rows: max-content;
+    row-gap: var(--sp-lg-3);
+}
+
+.nav-items > li {
+    display: grid;
+}
+
+.nav-items > li > a {
+    display: grid;
+    grid-template-columns: repeat(2, max-content) 1fr max-content;
+    column-gap: var(--sp-sm-3);
+
+    text-decoration: none;
+    color: var(--fg-default);
+
+    align-items: center;
+}
+
+
+.nav-items > li > a:hover{
+    color: var(--hi-secondary);
+}
+.nav-items > li > a::before{
+    --size: 4px;
+
+    content: '';
+    place-self: center;
+
+    display: block;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+}
+.nav-items > li > a.active{
+    color: var(--hi-primary);
+}
+
+.nav-items>li> a.active::before{
+    background-color: var(--hi-primary);
+}

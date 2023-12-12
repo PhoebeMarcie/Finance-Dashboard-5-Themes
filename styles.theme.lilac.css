@@ -1,0 +1,16 @@
+.theme-lilac{
+    --hi-primary: #A68CEF;
+    --hi-primary-rgb: 166, 140, 239;
+
+    --hi-secondary: #8560ef;
+
+    --hi-accent-1: #309eee;
+    --hi-accent-1-rgb: 48,158,238;
+    --hi-accent-2: #15c3c3;
+    --hi-accent-2-rgb: 21,195,195;
+    --hi-accent-3: #7153eb;
+    --hi-accent-3-rgb: 113,83,235;
+
+    --hi-bg: linear-gradient(105.96deg, var(--hi-secondary) 0.05%, var(--hi-primary) 100.05%); 
+
+}

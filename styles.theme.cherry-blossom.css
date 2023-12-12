@@ -1,0 +1,16 @@
+.theme-cherry-blossom{
+    --hi-primary: #f289c8;
+    --hi-primary-rgb: 242,137,200;
+
+    --hi-secondary: #f2d3e5;
+
+    --hi-accent-1: #FD80F8;
+    --hi-accent-1-rgb:253,128,248;
+    --hi-accent-2: #3CC2FC;
+    --hi-accent-2-rgb: 60,194,252;
+    --hi-accent-3: #3FD9D9;
+    --hi-accent-3-rgb: 63,217,217;
+
+    --hi-bg: linear-gradient(105.96deg, var(--hi-secondary) 0.05%, var(--hi-primary) 100.05%); 
+
+}

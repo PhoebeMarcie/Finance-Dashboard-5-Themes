@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Finance Dashboard</title>
+    <link rel="stylesheet" href="styles.base.css">
+    <link rel="stylesheet" href="styles.theme.ice.css">
+    <link rel="stylesheet" href="styles.theme.aurora.css">
+    <link rel="stylesheet" href="styles.theme.cherry-blossom.css">
+    <link rel="stylesheet" href="styles.theme.lilac.css">
+    <link rel="stylesheet" href="styles.theme.night-dive.css">
+    <link rel="stylesheet" href="styles.cards.css">
+    <link rel="stylesheet" href="styles.data.css">
+    <link rel="stylesheet" href="styles.elements.css">
+    <link rel="stylesheet" href="styles.transfer.css">
+    <link rel="stylesheet" href="styles.form.css">
+    <link rel="stylesheet" href="styles.nav.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Source+Code+Pro:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="theme-ice">
+    <main>
+      <nav>
+        <ul class="nav-items">
+          <li>
+            <a href="#" class="active">
+              <img
+                height="16"
+                width="16"
+                src="./assets/nav-icons/HouseSimple.svg"
+                alt=""
+              />
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img
+                height="16"
+                width="16"
+                src="./assets/nav-icons/Wallet.svg"
+                alt=""
+              />
+              Wallet
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img
+                height="16"
+                width="16"
+                src="./assets/nav-icons/Coins.svg"
+                alt=""
+              />
+              Payments
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img
+                height="16"
+                width="16"
+                src="./assets/nav-icons/GearSix.svg"
+                alt=""
+              />
+              Settings
+            </a>
+          </li>
+        </ul>
+
+        <ul class="nav-items">
+          <li>
+            <a href="#">
+              <img
+                height="16"
+                width="16"
+                src="./assets/nav-icons/Power.svg"
+                alt=""
+              />
+              Logout
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <header>
+        <h1>My Finances</h1>
+        <form action="">
+          <div class="form-item">
+            <div class="input-item">
+              <div
+                class="input-item_prefix input-item_prefix--active hi hi--neutral"
+              >
+                <img
+                  height="16"
+                  width="16"
+                  src="./assets/form-icons/MagnifyingGlass.svg"
+                  alt=""
+                />
+              </div>
+              <input type="text" placeholder="Search ..." />
+            </div>
+          </div>
+        </form>
+        <a href="#" class="action">
+          <img
+            height="16"
+            width="16"
+            src="./assets/form-icons/ShieldCheck.svg"
+            alt=""
+          />
+        </a>
+        <a href="#" class="action">
+          <img
+            height="16"
+            width="16"
+            src="./assets/form-icons/ChatTeardropDots.svg"
+            alt=""
+          />
+        </a>
+        <a href="#" class="action" id="theme-toggle">
+          <img
+            height="16"
+            width="16"
+            src="./assets/form-icons/FingerprintSimple.svg"
+            alt=""
+          />
+        </a>
+      </header>
+      <article class="dashboard">
+        <ul class="cards">
+          <li class="card card--active">
+            <data class="card_iban iban" value="DE48658222515760585654">
+              DE48&ensp;6582&ensp;2251&ensp;5760&ensp;5856&ensp;54
+            </data>
+
+            <svg
+              class="card_type"
+              xmlns="http://www.w3.org/2000/svg"
+              width="58"
+              height="41"
+              viewBox="0 0 58 41"
+              fill="none"
+            >
+              <path
+                d="M47.3365 18.128C47.3365 18.128 48.1017 21.4494 48.2729 22.1458H44.9097C45.242 21.3512 46.5208 18.2619 46.5208 18.2619C46.5007 18.2887 46.8531 17.4494 47.0545 16.9315L47.3365 18.128ZM58 4.61905V36.0476C58 38.4137 55.8351 40.3333 53.1667 40.3333H4.83333C2.16493 40.3333 1.08719e-06 38.4137 1.08719e-06 36.0476V4.61905C1.08719e-06 2.25298 2.16493 0.333334 4.83333 0.333334H53.1667C55.8351 0.333334 58 2.25298 58 4.61905ZM15.3559 27.0476L21.7198 13.1905H17.4403L13.483 22.6548L13.05 20.7351L11.6403 14.3601C11.4087 13.4762 10.6938 13.2262 9.80764 13.1905H3.29271L3.22222 13.4673C4.8132 13.8244 6.23299 14.3423 7.47153 14.994L11.0764 27.0476H15.3559ZM24.8615 27.0655L27.399 13.1905H23.351L20.8236 27.0655H24.8615ZM38.9486 22.5298C38.9688 20.9494 37.8813 19.744 35.5552 18.753C34.1354 18.119 33.2694 17.6905 33.2694 17.0387C33.2896 16.4494 34.0045 15.8423 35.5955 15.8423C36.9146 15.8155 37.8813 16.0923 38.6063 16.369L38.9688 16.5208L39.5226 13.5208C38.7271 13.244 37.4583 12.9315 35.8976 12.9315C31.9 12.9315 29.0906 14.8244 29.0705 17.5208C29.0403 19.5119 31.0844 20.619 32.6149 21.2887C34.1757 21.9673 34.7094 22.4137 34.7094 23.0119C34.6892 23.9405 33.4406 24.369 32.2826 24.369C30.6715 24.369 29.8056 24.1458 28.4865 23.628L27.9528 23.4048L27.3889 26.5208C28.3354 26.9048 30.0875 27.244 31.9 27.2619C36.1493 27.2708 38.9184 25.4048 38.9486 22.5298ZM53.1667 27.0655L49.9042 13.1905H46.7726C45.8059 13.1905 45.0708 13.4405 44.658 14.3423L38.6465 27.0655H42.8958C42.8958 27.0655 43.5906 25.3512 43.7417 24.9851H48.9375C49.0583 25.4762 49.4208 27.0655 49.4208 27.0655H53.1667Z"
+                fill="black"
+              />
+            </svg>
+            <data class="card_amount money money--large" value="40189,38€">
+              <span class="money_int">40.189</span>
+              <span class="money_dec">,38</span>
+              <span class="money_cur">€</span>
+            </data>
+            <div class="card_details">
+              <time>23. September</time>
+              &bull;
+              <em class="hi hi--bordered hi--positive hi-up text--small">
+                +6
+                <small>%</small>
+              </em>
+            </div>
+          </li>
+          <li class="card">
+            <data class="card_iban iban" value="DE70480395100000852149">
+              DE70&ensp;4803&ensp;9510&ensp;0000&ensp;8521&ensp;49
+            </data>
+
+            <img
+              class="card_type"
+              src="./assets/mastercard.svg"
+              width="58"
+              height="18"
+              alt=""
+            />
+
+            <data class="card_amount money money--large" value="9189062€">
+              <span class="money_int">9.189</span>
+              <span class="money_dec">,60</span>
+              <span class="money_cur">€</span>
+            </data>
+            <div class="card_details">
+              <time>22. September</time>
+              &bull;
+              <em
+                class="hi hi--bordered hi--negative hi--down text--small hi hi--bordered hi-up text--small"
+              >
+                &minus;4
+                <small>%</small>
+              </em>
+            </div>
+          </li>
+
+          <li class="card">
+            <data class="card_iban iban" value="DE88590087210000854499">
+              DE88&ensp;5900&ensp;8721&ensp;0000&ensp;8544&ensp;99
+            </data>
+            <svg
+              class="card_type"
+              xmlns="http://www.w3.org/2000/svg"
+              width="25"
+              height="25"
+              viewBox="0 0 5 5"
+              fill="none"
+            >
+              <path
+                d="M3.25 3.33333H3.625C3.6875 3.33333 3.75 3.25 3.75 3.16667V1.41667C3.75 1.33333 3.6875 1.25 3.625 1.25H3.25C3.1875 1.25 3.125 1.33333 3.125 1.41667V3.16667C3.125 3.25 3.1875 3.33333 3.25 3.33333ZM4.1875 3.33333H4.5625C4.625 3.33333 4.6875 3.25 4.6875 3.16667V0.166667C4.6875 0.0833334 4.625 0 4.5625 0H4.1875C4.125 0 4.0625 0.0833334 4.0625 0.166667V3.16667C4.0625 3.25 4.125 3.33333 4.1875 3.33333ZM1.375 3.33333H1.75C1.8125 3.33333 1.875 3.25 1.875 3.16667V2.25C1.875 2.16667 1.8125 2.08333 1.75 2.08333H1.375C1.3125 2.08333 1.25 2.16667 1.25 2.25V3.16667C1.25 3.25 1.3125 3.33333 1.375 3.33333ZM2.3125 3.33333H2.6875C2.75 3.33333 2.8125 3.25 2.8125 3.16667V0.583333C2.8125 0.5 2.75 0.416667 2.6875 0.416667H2.3125C2.25 0.416667 2.1875 0.5 2.1875 0.583333V3.16667C2.1875 3.25 2.25 3.33333 2.3125 3.33333ZM4.84375 4.16667H0.625V0.208333C0.625 0.0932292 0.555078 0 0.46875 0H0.15625C0.0699219 0 0 0.0932292 0 0.208333V4.58333C0 4.81341 0.139941 5 0.3125 5H4.84375C4.93008 5 5 4.90677 5 4.79167V4.375C5 4.2599 4.93008 4.16667 4.84375 4.16667Z"
+                fill="white"
+              />
+            </svg>
+
+            <data class="card_amount money money--large" value="7214,36€">
+              <span class="money_int">7.214</span>
+              <span class="money_dec">,36</span>
+              <span class="money_cur">€</span>
+            </data>
+            <div class="card_details">
+              <time>22. September</time>
+              &bull;
+              <em class="hi hi--bordered hi--neutral hi--steady text--small">
+                &plusmn;0
+                <small>%</small>
+              </em>
+            </div>
+          </li>
+        </ul>
+        <section class="daily-limit">
+          <header>
+            <h2>Daily Limit</h2>
+            <a class="action" href="#">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="15"
+                height="15"
+                viewBox="0 0 15 15"
+                fill="none"
+              >
+                <path
+                  d="M9.8858 9.64673H14.1358V1.39673C14.1358 0.981104 13.8014 0.646729 13.3858 0.646729H0.885803C0.470178 0.646729 0.135803 0.981104 0.135803 1.39673V13.8967C0.135803 14.3124 0.470178 14.6467 0.885803 14.6467H9.1358V10.3967C9.1358 9.98423 9.4733 9.64673 9.8858 9.64673ZM13.9171 11.3655L10.8546 14.428C10.7139 14.5686 10.5233 14.6467 10.3233 14.6467H10.1358V10.6467H14.1358V10.8374C14.1358 11.0342 14.0577 11.2249 13.9171 11.3655Z"
+                  fill="black"
+                />
+              </svg>
+            </a>
+          </header>
+          <div class="data-item">
+            <data class="money data-item_description" value="1560.00€">
+              <span class="money_int"> 1560</span>
+              <span class="money_dec">,00</span>
+              <span class="money_cur">€</span>
+            </data>
+            <data value="60%" class="data-item_value">
+              60 <span class="text--small">%</span>
+            </data>
+            <div
+              class="progress-bar data-item_indicator"
+              style="--value: 60"
+            ></div>
+          </div>
+          <ul class="value-items">
+            <li class="value-items_item">
+              <h3>Incomes</h3>
+              <data class="money" value="5874,56€">
+                <span class="money_int"> 5.874</span>
+                <span class="money_cur">€</span>
+              </data>
+              <em class="hi hi--positive hi--up text--small"> +6 % </em>
+            </li>
+            <li class="value-items_item">
+              <h3>Expenses</h3>
+              <data class="money" value="1584,94€">
+                <span class="money_int"> 1.584</span>
+                <span class="money_cur">€</span>
+              </data>
+              <em class="hi hi--positive hi--down text--small"> -3 % </em>
+            </li>
+            <li class="value-items_item">
+              <h3>Savings</h3>
+              <data class="money" value="8745,56€">
+                <span class="money_int"> 8.745</span>
+                <span class="money_cur">€</span>
+              </data>
+              <em class="hi hi--negative hi--down text--small"> -8 % </em>
+            </li>
+          </ul>
+        </section>
+        <section class="quick-transfer">
+          <header>
+            <h2>Quick Transfer</h2>
+            <a href="#" class="action">
+              <img src="./assets/Password.svg" alt="" width="16" height="16" />
+            </a>
+          </header>
+          <form action="">
+            <div class="transfer_targets">
+              <input
+                type="radio"
+                id="transfer-target-1"
+                name="transfer-target"
+                value="1"
+                checked
+              />
+
+              <label for="transfer-target-1">
+                <img src="./assets/avatars/u1.jpg" alt="" class="avatar" />
+              </label>
+              <input
+                type="radio"
+                id="transfer-target-2"
+                name="transfer-target"
+                value="2"
+                checked
+              />
+
+              <label for="transfer-target-2">
+                <img src="./assets/avatars/u1.jpg" alt="" class="avatar" />
+              </label>
+              <input
+                type="radio"
+                id="transfer-target-3"
+                name="transfer-target"
+                value="3"
+                checked
+              />
+
+              <label for="transfer-target-3">
+                <img src="./assets/avatars/u1.jpg" alt="" class="avatar" />
+              </label>
+              <input
+                type="radio"
+                id="transfer-target-4"
+                name="transfer-target"
+                value="4"
+                checked
+              />
+
+              <label for="transfer-target-4">
+                <img src="./assets/avatars/u1.jpg" alt="" class="avatar" />
+              </label>
+              <input
+                type="radio"
+                id="transfer-target-5"
+                name="transfer-target"
+                value="5"
+                checked
+              />
+
+              <label for="transfer-target-5">
+                <img src="./assets/avatars/u1.jpg" alt="" class="avatar" />
+              </label>
+            </div>
+
+            <div class="inputs">
+              <div class="form-item">
+                <div class="input-item">
+                  <div class="input-item_prefix hi hi--positive">
+                    <img
+                      src="./assets/form-icons/CurrencyEur.svg"
+                      alt=""
+                      width="16"
+                      height="16"
+                    />
+                  </div>
+                  <input type="text" value="1.305" />
+                </div>
+                <div class="form-item_description hi hi--positive">Covered</div>
+              </div>
+              <div class="form-item">
+                <div class="input-item">
+                  <div class="input-item_prefix hi hi--neutral">
+                    <img
+                      src="./assets/form-icons/NotePencil.svg"
+                      alt=""
+                      width="16"
+                      height="16"
+                    />
+                  </div>
+                  <input type="text" value="Project TXZ" />
+                </div>
+                <div class="form-item_description hi hi--neutral">Required</div>
+              </div>
+            </div>
+
+            <div class="toolbar">
+              <input type="submit" value="Send" />
+              <input type="button" value="Save as Draft" />
+            </div>
+          </form>
+        </section>
+        <section class="my-savings">
+          <header>
+            <h2>My Savings</h2>
+            <a href="#" class="action">
+              <img height="16" width="16" src="./assets/Coins.svg" alt="" />
+            </a>
+          </header>
+          <div class="data-item data-item--icon">
+            <div class="data-item_icon data-item_icon--hi">
+              <img height="24" width="24" src="./assets/Heart.svg" alt="" />
+            </div>
+            <div class="data-item_description">MacBook Pro</div>
+            <data class="money data-item_value" value="2400,85€">
+              <span class="money_int"> 2.400</span>
+              <span class="money_dec">,85</span>
+              <span class="money_cur">€</span>
+            </data>
+            <div
+              class="progress-bar data-item_indicator"
+              style="--value: 55"
+            ></div>
+          </div>
+          <div class="data-item data-item--icon">
+            <div class="data-item_icon data-item_icon--hi">
+              <img
+                height="24"
+                width="24"
+                src="./assets/GlobeStand.svg"
+                alt=""
+              />
+            </div>
+            <div class="data-item_description">Trip to Iceland</div>
+            <data class="money data-item_value" value="6600,85€">
+              <span class="money_int"> 6.600</span>
+              <span class="money_dec">,00</span>
+              <span class="money_cur">€</span>
+            </data>
+            <div
+              class="progress-bar data-item_indicator"
+              style="--value: 80"
+            ></div>
+          </div>
+          <div class="data-item data-item--icon">
+            <div class="data-item_icon data-item_icon--hi">
+              <img height="24" width="24" src="./assets/Cube.svg" alt="" />
+            </div>
+            <div class="data-item_description">Desk</div>
+            <data class="money data-item_value" value="1587,45€">
+              <span class="money_int"> 1.587</span>
+              <span class="money_dec">,45</span>
+              <span class="money_cur">€</span>
+            </data>
+            <div
+              class="progress-bar data-item_indicator"
+              style="--value: 25"
+            ></div>
+          </div>
+        </section>
+        <section class="my-activity">
+          <header>
+            <h2>My Activity</h2>
+            <a href="#" class="action">
+              <img
+                height="16"
+                width="16"
+                src="./assets/ChartPieSlice.svg"
+                alt=""
+              />
+            </a>
+          </header>
+          <h3>24. September</h3>
+
+          <div class="data-item data-item--icon">
+            <div class="data-item_icon">
+              <img
+                height="24"
+                width="24"
+                src="./assets/ArrowSquareIn.svg"
+                alt=""
+              />
+            </div>
+            <div class="data-item_description">Salary 2022-11</div>
+            <data class="money data-item_value" value="3954,87€">
+              <span class="money_int"> 3.954</span>
+              <span class="money_dec">,87</span>
+              <span class="money_cur">€</span>
+            </data>
+            <small class="text--muted text--small">Hashicorp Inc</small>
+          </div>
+          <h3>23. September</h3>
+          <div class="data-item data-item--icon">
+            <div class="data-item_icon">
+              <img
+                height="24"
+                width="24"
+                src="./assets/ArrowSquareOut.svg"
+                alt=""
+              />
+            </div>
+            <div class="data-item_description">Membership</div>
+            <data class="money data-item_value" value="-12,99€">
+              <span class="money_int"> -12</span>
+              <span class="money_dec">,99</span>
+              <span class="money_cur">€</span>
+            </data>
+            <small class="text--muted text--small">Netflix</small>
+          </div>
+        </section>
+      </article>
+    </main>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

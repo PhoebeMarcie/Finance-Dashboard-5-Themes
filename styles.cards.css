@@ -1,0 +1,97 @@
+.cards{
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+
+    list-style-type: none;
+}
+
+.card{
+  position: relative;
+    display: grid;
+    grid-template-rows:  max-content 1fr max-content
+    ;
+    grid-template-columns: 1fr min-content;
+    grid-template-areas: "iban type"
+    "amount amount" "details details";
+    place-items: center start;
+
+    aspect-ratio: 20 /11;
+
+    border-radius: var(--bd-radius);
+    padding: var(--sp-lg-2) var(--sp-lg-3);
+    border: 1px solid var(--bd-default);
+
+    background: var(-bg);
+
+    background-size: cover;
+    
+    background-position: bottom -1px right -1px;
+
+    transition: var(--tr-default);
+    transition-property: box-shadow;
+}
+
+.card::before{
+    content: '';
+    --size: 14px;
+    --spacing: 8px;
+    --color: transprent;
+
+    position: absolute;
+    width: var(--size);
+    height: var(--size);
+    right: calc(-2.25 * (var(--size)/ 2 + var(--spacing)));
+    top: calc(50% - var(--size) / 2 -var(--spacing));
+    border-radius: 50%;
+    border: var(--spacing) solid var(--bg-default);
+    background-color: var(--color);
+    opacity: 0;
+
+    transition: var(--tr-default);
+    transition-property: right;
+}
+.card.card--active::before {
+    right: calc(-1 * (var(--size) / 2 + var(--spacing)));
+    --color: var(--hi-primary);
+    opacity: 1;
+}
+
+.card:hover::before {
+    --color: var(--bg-alt);
+    right: calc(-1 * (var(--size) / 2 + var(--spacing)));
+    opacity: 1;
+
+}
+.card--active{
+    background:  var(--hi-bg);
+
+    color: var(--fg-hi);
+    box-shadow: 4px 40px 48px -48px var(--hi-primary);
+}
+.card:hover{
+    box-shadow: 4px 40px 48px -48px rgba(var(--hi-primary-rgb),0.25);
+}
+
+
+.card_iban{
+    grid-area: iban;
+}
+.card_type{
+    grid-area: type;
+}
+.card_amount{
+    grid-area: amount;
+}
+.card_details{
+    grid-area: details;
+
+    display: flex;
+    align-items: center;
+    gap: 1ch;
+}
+
+.card--active .money_cur,
+.card--active .money_dec{
+    color: var(--fg-hi);
+}
